@@ -25,4 +25,4 @@ jobs:
 
     - name: Run Ansible Playbook
       run: |
-        ansible-playbook -i inventory.ini your-playbook.yml --private-key ec2_key.pem
+        ansible-playbook -i inventory.ini playbook.yml --private-key ec2_key.pem
