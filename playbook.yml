@@ -11,7 +11,7 @@
     - name: Copy NGINX site config
       copy:
         src: ./yii2-app-basic
-        dest: /etc/nginx/sites-available/yii2
+        dest: /var/www/html/
 
     - name: Enable the NGINX site
       file:
