@@ -1,0 +1,31 @@
+- name: Setup NGINX on EC2
+  hosts: web
+  become: true
+  tasks:
+    - name: Install NGINX
+      apt:
+        name: nginx
+        state: present
+        update_cache: yes
+
+    - name: Copy NGINX site config
+      copy:
+        src: ./yii2
+        dest: /etc/nginx/sites-available/yii2
+
+    - name: Enable the NGINX site
+      file:
+        src: /etc/nginx/sites-available/yii2
+        dest: /etc/nginx/sites-enabled/yii2
+        state: link
+
+    - name: Ensure Apache is stopped
+      systemd:
+        name: apache2
+        state: stopped
+        enabled: no
+
+    - name: Restart NGINX
+      systemd:
+        name: nginx
+        state: restarted
