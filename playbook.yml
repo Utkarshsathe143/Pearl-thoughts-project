@@ -43,6 +43,12 @@
         name: docker-ce
         state: present
         update_cache: yes
+    
+    - name: Start and enable Docker service
+      systemd:
+        name: docker
+        state: started
+        enabled: yes
 
     - name: Pull Yii2 Docker image from Docker Hub
       shell: docker pull utkarshsathe/yii2-app:latest
