@@ -15,7 +15,7 @@ RUN sed -i 's|DocumentRoot /var/www/html|DocumentRoot /var/www/html/yii2-app-bas
 # Set working directory
 WORKDIR /var/www/html/yii2-app-basic
 
-# Fix permissions new
+# Fix permissions new 1
 RUN chown -R www-data:www-data /var/www/html \
     && chmod -R 755 /var/www/html
 
