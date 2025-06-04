@@ -9,7 +9,7 @@ RUN a2enmod rewrite
 # Copy Yii2 app to container 
 COPY . /var/www/html/
 
-# Set working directory
+# Set working directory i
 WORKDIR /var/www/html/
 
 # Permissions
