@@ -21,11 +21,11 @@ jobs:
 
     - name: Build Docker image
       run: |
-        sudo docker build -t satheutkarsh1409@gmail.com/yii2-app:latest .
+        sudo docker build -t UtKaRsHSaThe/yii2-app:latest .
 
     - name: Push Docker image
       run: |
-        sudo docker push satheutkarsh1409@gmail.com/yii2-app:latest
+        sudo docker push UtKaRsHSaThe/yii2-app:latest
 
     - name: Set up Python and install Ansible
       run: |
