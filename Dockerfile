@@ -14,6 +14,9 @@ RUN apt-get update && apt-get install -y curl unzip git \
 # Copy app code to container
 COPY . /var/www/html/
 
+#Validate if the key is copied or not 
+RUN cat /var/www/html/yii2-app-basic/config/web.php | grep cookieValidationKey
+
 # Set working directory to Yii2
 WORKDIR /var/www/html/yii2-app-basic
 

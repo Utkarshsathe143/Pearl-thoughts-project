@@ -23,9 +23,9 @@ jobs:
         username: ${{ secrets.DOCKER_USERNAME }}
         password: ${{ secrets.DOCKER_PASSWORD }}
 
-    - name: Build Docker image
+    - name: Build Docker image with no cache
       run: |
-        docker build -t utkarshsathe/yii2-app:latest .
+        docker build --no-cache -t utkarshsathe/yii2-app:latest .
 
     - name: Push Docker image
       run: |
