@@ -23,7 +23,7 @@ RUN grep cookieValidationKey /var/www/html/yii2-app-basic/config/web.php
 # Set working directory
 WORKDIR /var/www/html/yii2-app-basic
 
-# Run composer install
+# Run composer
 RUN composer install --no-interaction --prefer-dist --optimize-autoloader
 
 # Set Apache DocumentRoot
