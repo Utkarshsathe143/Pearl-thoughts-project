@@ -14,7 +14,7 @@ RUN apt-get update && apt-get install -y curl unzip git \
 # Copy app code to container
 COPY . /var/www/html/
 
-# Set working directory to Yii2 app
+# Set working directory to Yii2
 WORKDIR /var/www/html/yii2-app-basic
 
 # Run composer install to get vendor/ folder
