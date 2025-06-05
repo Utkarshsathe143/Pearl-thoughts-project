@@ -57,7 +57,7 @@
       shell: docker rm -f yii2-app || true
 
     - name: Run Yii2 Docker container
-      shell: docker run -d -p 8080:80 --name yii2-app utkarshsathe/yii2-app:latest
+      shell: docker run -d -p 8888:80 --name yii2-app utkarshsathe/yii2-app:latest
 
     - name: Copy NGINX reverse proxy config
       copy:
