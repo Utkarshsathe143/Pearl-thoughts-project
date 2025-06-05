@@ -24,8 +24,8 @@
         state: present
         update_cache: yes
 
-    - name: Add Docker GPG key
-      shell: curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+    # - name: Add Docker GPG key
+    #   shell: curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
     
     - name: Add Docker GPG key
       apt_key:
